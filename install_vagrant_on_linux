@@ -1,0 +1,12 @@
+yum -y install gcc dkms make qt libgomp patch screen
+yum -y install kernel-headers kernel-devel binutils glibc-headers glibc-devel font-forge
+yum -y install  https://download.virtualbox.org/virtualbox/6.1.18/VirtualBox-6.1-6.1.18_142142_el7-1.x86_64.rpm
+/sbin/rcvboxdrv setup
+
+yum -y install https://releases.hashicorp.com/vagrant/2.2.10/vagrant_2.2.10_x86_64.rpm
+mkdir ~/vagrant-home
+cd ~/vagrant-home 
+vagrant init centos/7   ||    vagrant init ubuntu/xenial64
+vagrant up
+
+install the kernel packages as per the instruction if error occur
